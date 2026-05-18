@@ -1,0 +1,52 @@
+### TASKS
+GET http://localhost:3000/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJpYXQiOjE3NzkxMDk2MzEsImV4cCI6MTc3OTE5NjAzMX0.fXbitMRpwbWJx_1kkVtBAaEY8_sHDZq8TLP4gy_tZGI
+
+### SEARCH
+GET http://localhost:3000/tasks?search=nestjs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJpYXQiOjE3NzkxMDk2MzEsImV4cCI6MTc3OTE5NjAzMX0.fXbitMRpwbWJx_1kkVtBAaEY8_sHDZq8TLP4gy_tZGI
+
+### FILTER COMPLETED
+GET http://localhost:3000/tasks?completed=true
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJpYXQiOjE3NzkxMDk2MzEsImV4cCI6MTc3OTE5NjAzMX0.fXbitMRpwbWJx_1kkVtBAaEY8_sHDZq8TLP4gy_tZGI
+
+### FILTER PRIORITY
+GET http://localhost:3000/tasks?priority=high
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJpYXQiOjE3NzkxMDk2MzEsImV4cCI6MTc3OTE5NjAzMX0.fXbitMRpwbWJx_1kkVtBAaEY8_sHDZq8TLP4gy_tZGI
+
+### SORT ASC
+GET http://localhost:3000/tasks?sort=asc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJpYXQiOjE3NzkxMDk2MzEsImV4cCI6MTc3OTE5NjAzMX0.fXbitMRpwbWJx_1kkVtBAaEY8_sHDZq8TLP4gy_tZGI
+
+### PAGINATION
+GET http://localhost:3000/tasks?page=2&limit=3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJpYXQiOjE3NzkxMDk2MzEsImV4cCI6MTc3OTE5NjAzMX0.fXbitMRpwbWJx_1kkVtBAaEY8_sHDZq8TLP4gy_tZGI
+
+### COMBINED QUERY
+GET http://localhost:3000/tasks?search=nestjs&priority=high&page=1&limit=5&sort=desc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJpYXQiOjE3NzkxMDk2MzEsImV4cCI6MTc3OTE5NjAzMX0.fXbitMRpwbWJx_1kkVtBAaEY8_sHDZq8TLP4gy_tZGI
+
+### CREATE TASK
+POST http://localhost:3000/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJpYXQiOjE3NzkxMDk2MzEsImV4cCI6MTc3OTE5NjAzMX0.fXbitMRpwbWJx_1kkVtBAaEY8_sHDZq8TLP4gy_tZGI
+Content-Type: application/json
+
+{
+  "title": "Learn NestJS",
+  "description": "Finish phase 4",
+  "priority": "high",
+  "category": "study"
+}
+
+### UPDATE TASK
+PATCH http://localhost:3000/tasks/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJpYXQiOjE3NzkxMDk2MzEsImV4cCI6MTc3OTE5NjAzMX0.fXbitMRpwbWJx_1kkVtBAaEY8_sHDZq8TLP4gy_tZGI
+Content-Type: application/json
+
+{
+  "completed": true
+}
+
+### DELETE TASK
+DELETE http://localhost:3000/tasks/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJpYXQiOjE3NzkxMDk2MzEsImV4cCI6MTc3OTE5NjAzMX0.fXbitMRpwbWJx_1kkVtBAaEY8_sHDZq8TLP4gy_tZGI
